@@ -1,0 +1,9 @@
+.list-wrap{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.list-item{
+  width: 48%;
+  margin-bottom: 32rpx;
+}

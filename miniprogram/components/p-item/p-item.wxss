@@ -1,0 +1,33 @@
+
+
+.item .pic {
+  background-color: #fff;
+  border-radius: 12rpx;
+  overflow: hidden;
+  border: 1px solid #f6f6f6;
+}
+
+.item .pic__main {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 200%;
+}
+
+.item .pic__main .image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.item .pic__sed{
+}
+.item .pic__sed .image {
+  width: 100%;
+  height: 196rpx;
+}
+.item .pic__sed .image:first-child{
+  margin-bottom: 8rpx;
+}

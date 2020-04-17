@@ -1,0 +1,5 @@
+<view class="list-wrap">
+  <p-item class="list-item" />
+  <p-item class="list-item" />
+  <p-item class="list-item" />
+</view>

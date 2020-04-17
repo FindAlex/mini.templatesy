@@ -1,0 +1,8 @@
+<view class="item">
+  <view class="pic">
+    <view class="pic__main">
+      <image class="image" mode="scaleToFill" src="../../images/temp/1.jpg"></image>
+    </view>
+    
+  </view>
+</view>

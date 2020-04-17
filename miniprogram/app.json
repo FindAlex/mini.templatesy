@@ -1,0 +1,53 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/explore/explore",
+        "pages/my/collection/collection",
+        "pages/my/index/index"
+    ],
+    "window": {
+        "backgroundColor": "#ffffff",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTitleText": "小程序设计灵感",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "#1989fa",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "./images/tab/home.png",
+                "selectedIconPath": "./images/tab/home-fill.png"
+            },
+            {
+                "pagePath": "pages/explore/explore",
+                "text": "发现",
+                "iconPath": "./images/tab/compass.png",
+                "selectedIconPath": "./images/tab/compass-fill.png"
+            },
+            {
+                "pagePath": "pages/my/collection/collection",
+                "text": "收藏",
+                "iconPath": "./images/tab/heart.png",
+                "selectedIconPath": "./images/tab/heart-fill.png"
+            },
+            {
+                "pagePath": "pages/my/index/index",
+                "text": "我的",
+                "iconPath": "./images/tab/user.png",
+                "selectedIconPath": "./images/tab/user-fill.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2",
+    "usingComponents": {
+      "p-item":"./components/p-item/p-item",
+      "p-item-list":"./components/p-item-list/p-item-list",
+      "van-button": "@vant/weapp/button/index",
+      "van-icon":"@vant/weapp/icon/index"
+    }
+}

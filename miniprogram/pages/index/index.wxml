@@ -1,0 +1,17 @@
+<!-- 推荐 -->
+<view class="c-wrap">
+	<view class="hug-title">
+		<view class="text">本期推荐</view>
+	</view>
+	<swiper class="swiper-1" display-multiple-items="2" next-margin="30px">
+		<swiper-item class="swiper-item">
+			<p-item/>
+		</swiper-item>
+		<swiper-item class="swiper-item">
+			<p-item/>
+		</swiper-item>
+		<swiper-item class="swiper-item">
+			<p-item/>
+		</swiper-item>
+	</swiper>
+</view>
