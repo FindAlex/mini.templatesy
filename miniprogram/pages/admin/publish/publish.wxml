@@ -1,0 +1,24 @@
+
+<form>
+<van-cell-group>
+  <van-field
+    value="{{ value }}"
+    label="标题"
+  />
+  <van-field
+    type="textarea"
+    value="{{ value }}"
+    label="描述"
+    autosize
+  />
+  <van-field
+    value="{{ value }}"
+    label="分类"
+  >
+    
+  </van-field>
+</van-cell-group>
+</form>
+<view class="c-wrap">
+  <van-button type="info"  size="small" round  bindtap="handleAdd">字典编辑</van-button>
+</view>

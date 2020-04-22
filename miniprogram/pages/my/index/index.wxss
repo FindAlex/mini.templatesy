@@ -1,1 +1,19 @@
-/* miniprogram/pages/my/index/index.wxss */
+page{
+  background-color: var(--c-bg-gray);
+}
+.user-box{
+  padding: 32rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+.user-box .avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 32rpx;
+}
+.user-box .nickname{
+  font-size: 32rpx;
+}

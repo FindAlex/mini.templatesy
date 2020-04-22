@@ -11,3 +11,9 @@ image{
 .c-wrap{
   padding: 32rpx;
 }
+.c-mb8{
+  margin-bottom: 16rpx;
+}
+.c-mb16{
+  margin-bottom: 32rpx;
+}

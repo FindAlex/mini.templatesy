@@ -44,13 +44,32 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 0,
 			"list": [
 				{
 					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
+					"name": "pages/my/index/index",
+					"pathName": "pages/my/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/manager/manager",
+					"pathName": "pages/admin/manager/manager",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/publish/publish",
+					"pathName": "pages/admin/publish/publish",
+					"scene": null
 				}
 			]
 		}

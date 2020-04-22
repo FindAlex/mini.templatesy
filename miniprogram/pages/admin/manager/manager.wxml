@@ -1,0 +1,3 @@
+<view class="toolbar c-wrap">
+  <van-button type="primary" block round plain bindtap="handleAdd">新增</van-button>
+</view>
