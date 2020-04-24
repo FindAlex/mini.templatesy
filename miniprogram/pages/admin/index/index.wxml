@@ -1,0 +1,6 @@
+
+<van-cell-group>
+  <van-cell title="Publish" is-link url="/pages/admin/publish/publish" />
+  <van-cell title="Manager" is-link url="/pages/admin/manager/manager" />
+  <van-cell title="Dict" is-link url="/pages/admin/dict/dict" />
+</van-cell-group>

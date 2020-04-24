@@ -1,1 +1,3 @@
-/* miniprogram/pages/admin/dict/dict.wxss */
+page{
+  background-color: var(--c-bg-gray);
+}

@@ -3,5 +3,5 @@
 <open-data class="nickname" type="userNickName"></open-data>
 </view>
 <van-cell-group>
-  <van-cell title="Admin" label="管理人员登录" is-link url="/pages/admin/manager/manager" />
+  <van-cell title="Admin" label="管理人员登录" is-link url="/pages/admin/index/index" />
 </van-cell-group>

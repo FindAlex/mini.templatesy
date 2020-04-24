@@ -17,3 +17,15 @@ image{
 .c-mb16{
   margin-bottom: 32rpx;
 }
+.c-bottom-space{
+  height: 100rpx;
+}
+.c-uploader-wrap{
+  padding: 32rpx;
+}
+.c-uploader-wrap .title{
+  margin-bottom: 32rpx;
+  font-size: 32rpx;
+  padding: 0 8rpx;
+  color: #333;
+}

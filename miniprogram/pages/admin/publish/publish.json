@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText":"Document发布",
+  "usingComponents": {
+    "van-uploader": "@vant/weapp/uploader/index"
+  }
 }

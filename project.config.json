@@ -28,6 +28,7 @@
 	"libVersion": "2.2.3",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -69,6 +70,20 @@
 					"id": -1,
 					"name": "pages/admin/publish/publish",
 					"pathName": "pages/admin/publish/publish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/index/index",
+					"pathName": "pages/admin/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/dict/dict",
+					"pathName": "pages/admin/dict/dict",
 					"scene": null
 				}
 			]

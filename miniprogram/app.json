@@ -6,13 +6,14 @@
     "pages/my/index/index",
     "pages/admin/manager/manager",
     "pages/admin/publish/publish",
-    "pages/admin/dict/dict"
+    "pages/admin/dict/dict",
+    "pages/admin/index/index"
   ],
   "window": {
     "backgroundColor": "#ffffff",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "小程序设计灵感",
+    "navigationBarTitleText": "移动应用设计灵感",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -53,6 +54,7 @@
     "van-icon": "@vant/weapp/icon/index",
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
-    "van-field": "@vant/weapp/field/index"
+    "van-field": "@vant/weapp/field/index",
+    "van-panel": "@vant/weapp/panel/index"
   }
 }

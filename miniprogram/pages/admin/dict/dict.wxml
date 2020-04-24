@@ -1,2 +1,13 @@
-<!--miniprogram/pages/admin/dict/dict.wxml-->
-<text>miniprogram/pages/admin/dict/dict.wxml</text>
+<view class="c-wrap">
+  <van-button type="primary" block plain round>新增</van-button>
+</view>
+<van-cell-group>
+  <van-cell 
+    wx:for="{{list}}" 
+    wx:key="id" 
+    title="{{item.title}}"
+    label="{{item.value}}"
+    value="{{item.type}}" 
+    is-link />
+</van-cell-group>
+<view class="c-bottom-space"></view>

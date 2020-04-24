@@ -1,23 +1,18 @@
-// miniprogram/pages/admin/dict/dict.js
-const app = getApp()
+// miniprogram/pages/admin/index/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list:[]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    app.$cloudFn.admin.dict().then(data=>{
-      this.setData({
-        list: data
-      })
-    })
+
   },
 
   /**

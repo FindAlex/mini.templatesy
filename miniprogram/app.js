@@ -1,4 +1,5 @@
 //app.js
+import cloudFn from './cloudFn/index'
 App({
   onLaunch: function () {
 
@@ -16,5 +17,6 @@ App({
     }
 
     this.globalData = {}
-  }
+  },
+  $cloudFn: cloudFn
 })
