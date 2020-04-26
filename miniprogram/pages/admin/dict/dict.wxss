@@ -1,3 +1,24 @@
 page{
   background-color: var(--c-bg-gray);
 }
+
+.pop-head{
+  height: 50rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.pop-bottom{
+  padding: 60rpx 0 100rpx;
+  display: flex;
+  justify-content: center;
+}
+.pop-bottom .btn{
+  margin: 0 20rpx;
+  min-width: 40%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+}

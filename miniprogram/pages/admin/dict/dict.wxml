@@ -1,5 +1,5 @@
 <view class="c-wrap">
-  <van-button type="primary" block plain round>新增</van-button>
+  <van-button type="primary" block plain round bindtap="editPopShow">新增</van-button>
 </view>
 <van-cell-group>
   <van-cell 
@@ -11,3 +11,24 @@
     is-link />
 </van-cell-group>
 <view class="c-bottom-space"></view>
+
+<van-popup show="{{ status.editPopShow }}" position="bottom" bind:close="editPopClose" closeable>
+  <view class="pop-head c-wrap">
+    <van-icon name="edit" size="17" /> Dict编辑
+  </view>
+  <van-cell-group>
+  <form bindsubmit="handlePopSave">
+    <van-field name="title" value="{{form.title}}" label="title" />
+    <van-cell title="type">
+    <van-radio-group name="type" value="{{ form.type }}" bind:change="handleTypeChange">
+      <van-radio custom-class="c-mb8" wx:for="{{enums.types}}" wx:key="item" name="{{item}}">{{item}}</van-radio>
+    </van-radio-group>
+    </van-cell>
+    <van-field name="value" value="{{form.value}}" label="value" />
+    <view class="c-wrap pop-bottom">
+      <button class="btn" size="mini" type="warn" bindtap="handlePopDel">删除</button>
+      <button class="btn" size="mini" type="primary" form-type="submit">保存</button>
+    </view>
+  </form>
+  </van-cell-group>
+</van-popup>

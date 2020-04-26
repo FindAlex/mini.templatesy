@@ -6,7 +6,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[]
+    list:[],
+    status:{
+      editPopShow: true
+    },
+    enums:{
+      types:['platform','content','color','industry']
+    },
+    form:{
+      title: null,
+      type: null,
+      value: null
+    }
   },
 
   /**
@@ -19,53 +30,31 @@ Page({
       })
     })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  editPopShow(){
+    this.setData({
+      'status.editPopShow': true
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  editPopClose(){
+    this.setData({
+      'status.editPopShow': false
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleTypeChange(e){
+    this.setData({
+      'form.type':e.detail
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  handlePopSave(e){
+    let {title,type,value} = e.detail.value
+    app.$cloudFn.admin.dict({
+      method:'add',
+      data:{
+        title,type,value
+      }
+    })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+  handlePopDel(){
 
   }
 })
