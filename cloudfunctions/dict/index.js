@@ -13,19 +13,26 @@ exports.main = async (event, context) => {
     case 'add':
       return await collection.add({
         data: {
-          tilte: event.data.title,
+          title: event.data.title,
           type: event.data.type,
           value: event.data.value
         }
       })
       break
-    case 'del':
-      break
     case 'update':
+      return await collection.doc(event.data._id).update({
+        data:{
+          title: event.data.title,
+          type: event.data.type,
+          value: event.data.value
+        }
+      })
       break  
-    case 'get':  
+    case 'del':
+      return await collection.doc(event.data._id).remove()
+      break
     default: //get
-      return await db.collection("dict_sys").get()
+      return await collection.orderBy('type','desc').get()
       break
   }
  

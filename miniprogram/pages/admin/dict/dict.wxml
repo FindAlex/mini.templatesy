@@ -8,7 +8,10 @@
     title="{{item.title}}"
     label="{{item.value}}"
     value="{{item.type}}" 
-    is-link />
+    is-link
+    data-index="{{index}}"
+    bindtap="handleEdit"
+     />
 </van-cell-group>
 <view class="c-bottom-space"></view>
 
@@ -27,7 +30,7 @@
     <van-field name="value" value="{{form.value}}" label="value" />
     <view class="c-wrap pop-bottom">
       <button class="btn" size="mini" type="warn" bindtap="handlePopDel">删除</button>
-      <button class="btn" size="mini" type="primary" form-type="submit">保存</button>
+      <button class="btn" size="mini" type="primary" form-type="submit" loading="">保存</button>
     </view>
   </form>
   </van-cell-group>
