@@ -28,7 +28,8 @@ Page({
   },
   getList(){
     wx.showLoading()
-    app.$cloudFn.admin.dict().then(data=>{
+    app.$utils.removeStorageDictSys()
+    app.$utils.getDictSys().then(data=>{
       this.setData({
         list: data
       })
