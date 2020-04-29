@@ -2,9 +2,13 @@ import cloudFn from '../cloudFn/index'
 const storageKey ={
   dictSys: 'admin.dict_sys'
 }
-export const getDictSys = async() => {
+export const getDictSys = async(code) => {
   let res = wx.getStorageSync('admin.dict_sys')
   if(res){
+    if(code){
+      console.log(code)
+      return getDictSysCode(res,code)
+    }
     return res
   }else{
     const data = await cloudFn.admin.dict()
@@ -14,10 +18,20 @@ export const getDictSys = async() => {
         key: storageKey.dictSys,
       })
     }
+    if(code){
+      return getDictSysCode(data,code)
+    }
     return data
   }
+}
+const getDictSysCode = (dicts,code) =>{
+  return dicts.filter(item=>item.type === code)
 }
 
 export const removeStorageDictSys = () =>{
   wx.removeStorageSync(storageKey.dictSys)
+}
+
+export const deepCopy = (obj)=>{
+  return JSON.parse(JSON.stringify(obj))
 }

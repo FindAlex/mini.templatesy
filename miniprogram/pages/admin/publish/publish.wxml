@@ -1,36 +1,30 @@
-<form>
 <van-cell-group>
   <van-field
-    value="{{ value }}"
+    value="{{ form.title }}"
     label="标题"
+    input-align="right"
+    data-field="title"
+    bind:change="handleFormChange"
   />
   <van-field
     type="textarea"
-    value="{{ value }}"
+    value="{{ form.description }}"
     label="描述"
+    input-align="right"
+    data-field="description"
+    bind:change="handleFormChange"
     autosize
   />
-  <van-field
-    value="{{ value }}"
-    label="平台"
-  />
-  <van-field
-    value="{{ value }}"
-    label="颜色"
-  />
-  <van-field
-    value="{{ value }}"
-    label="行业"
-  />
+  <dict-select title="平台" code="platform" bind:change="dictChange" />
+  <dict-select title="颜色" code="color" bind:change="dictChange" />
+  <dict-select title="行业" code="industry" bind:change="dictChange" />
   
   <view class="c-uploader-wrap c-mb16">
     <view class="title">图片上传</view>
-    <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+    <van-uploader file-list="{{ fileList }}" bind:after-read="handleUploadAfterRead" />
   </view>
   <view class="c-wrap">
     <van-button type="primary" block>提交</van-button>
   </view>
   <view class="c-bottom-space"></view>
 </van-cell-group>
-
-</form>

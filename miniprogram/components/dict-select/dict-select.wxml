@@ -1,0 +1,9 @@
+<van-field value="{{ valueString }}" label="{{ title}}" bind:tap="popupShow" is-link readonly input-align="right" />
+<van-popup show="{{status.popupShow}}" position="bottom">
+	<van-nav-bar safe-area-inset-top="{{false}}" title="{{title}}" left-text="取消" right-text="确定" bind:click-left="popupClose" bind:click-right="popupConfirm" />
+  <view  class="popup-checkbox-wrap">
+	<van-checkbox-group value="{{value}}" bind:change="onCheckboxChange">
+		<van-checkbox custom-class="popup-checkbox" wx:for="{{dictEnums}}" wx:key="_id" name="{{index}}">{{item.title}}</van-checkbox>
+	</van-checkbox-group>
+  </view>
+</van-popup>

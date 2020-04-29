@@ -5,7 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    form:{
+      title: null,
+      description: null,
+      platform: [],
+      color: [],
+      industry: [],
+      images: []
+    }
   },
 
   /**
@@ -14,53 +21,29 @@ Page({
   onLoad: function (options) {
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleFormChange(e){
+    const {field} = e.target.dataset
+    this.data.form[field] = e.detail
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  dictChange(e){
+    const {code,value} = e.detail
+    this.data.form[code] = value.map(item=>item._id)
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleUploadAfterRead(e){
+    let path = e.detail.file.path
+    let suffix = path.match(/(?<=\.)([^\.]+)$/g)
+    let cloudPath = 'document/'+new Date().getTime()+'.'+suffix
+    console.log(cloudPath)
+    // wx.cloud.uploadFile({
+    //   cloudPath: `document/.png`,
+    //   filePath: e.detail.file.path, // 文件路径
+    //   success: res => {
+    //     // get resource ID
+    //     console.log(res.fileID)
+    //   },
+    //   fail: err => {
+    //     // handle error
+    //   }
+    // })
   }
 })

@@ -1,0 +1,6 @@
+.popup-checkbox-wrap{
+  padding: 32rpx;
+}
+.popup-checkbox{
+  margin-bottom: 24rpx;
+}
