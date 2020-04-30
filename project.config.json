@@ -84,6 +84,14 @@
 					"id": -1,
 					"name": "pages/admin/dict/dict",
 					"pathName": "pages/admin/dict/dict",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "pages/admin/publish/publish【edit】",
+					"pathName": "pages/admin/publish/publish",
+					"query": "_id=5feb61565eaa8fd00031569313fd2572",
 					"scene": null
 				}
 			]

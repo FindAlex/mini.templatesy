@@ -1,0 +1,8 @@
+<view class="list">
+  <navigator url="/pages/admin/publish/publish?_id={{item._id}}" class="item" wx:for="{{list}}" wx:key="_id">
+    <image class="item__image" src="{{item.images[0]}}"/>
+    <view>
+      {{item.title}}
+    </view>
+  </navigator>
+</view>

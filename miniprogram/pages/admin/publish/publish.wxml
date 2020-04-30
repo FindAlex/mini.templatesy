@@ -21,10 +21,10 @@
   
   <view class="c-uploader-wrap c-mb16">
     <view class="title">图片上传</view>
-    <van-uploader file-list="{{ fileList }}" bind:after-read="handleUploadAfterRead" />
+    <van-uploader file-list="{{ fileList }}"  multiple bind:after-read="handleUploadAfterRead" />
   </view>
   <view class="c-wrap">
-    <van-button type="primary" block>提交</van-button>
+    <van-button type="primary" block bindtap="handleSubmit">提交</van-button>
   </view>
   <view class="c-bottom-space"></view>
 </van-cell-group>

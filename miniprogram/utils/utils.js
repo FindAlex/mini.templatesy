@@ -1,9 +1,9 @@
 import cloudFn from '../cloudFn/index'
 const storageKey ={
-  dictSys: 'admin.dict_sys'
+  dictSys: 'sys_dict'
 }
 export const getDictSys = async(code) => {
-  let res = wx.getStorageSync('admin.dict_sys')
+  let res = wx.getStorageSync(storageKey.dictSys)
   if(res){
     if(code){
       console.log(code)

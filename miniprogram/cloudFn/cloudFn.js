@@ -5,13 +5,14 @@ const cloudFn = ({name,data={},config={},success,fail,complete})=>{
       data,
       config,
       success:res=>{
+        console.log(res)
         reslove(res.result.data)
         success && success(res.result.data)
       },
       fail:res=>{
         wx.showModal({
-          title:"异常提示",
-          content:"云函数调用"+name+"失败，请检查您的网络或稍后再试"
+          title:"云函数异常",
+          content:`【${name}】模块，错误：${res}`
         })
         reject(res)
         fail && fail(res)
