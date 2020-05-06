@@ -21,22 +21,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log( this.options._id)
     if(options._id){
       this.data.form._id=options._id
       this.getDetail()
     }
   },
   getDetail(){
-    console.log( this.data.form._id)
     app.$cloudFn.admin.document({
       method:'detail',
       data:{
         _id: this.data.form._id
       }
     }).then(res=>{
+      const fileList = res.images.map(item=>{
+        return {url: item}
+      })
       this.setData({
-        form: res
+        form: res,
+        fileList 
       })
     })
   },
@@ -55,6 +57,12 @@ Page({
     })
     
   },
+  handleUploadDelete(e){
+    this.data.images.splice(e.detail.index,1)
+    this.setData({
+      images: this.data.images
+    })
+  },
   handleSubmit(){
     if(this.data.fileList.length){
       let imgUps = []
@@ -66,7 +74,8 @@ Page({
       })
       wx.showLoading()
       Promise.all(imgUps).then(res=>{
-        this.data.form.images = res.map(item=>item.fileID)
+        let images = res.map(item=>item.fileID)
+        this.data.form.images = this.data.form.images.concat(images)
         this._formSubmit()
       }).catch(err=>{
         console.log(err)
@@ -94,6 +103,9 @@ Page({
       wx.hideLoading()
       wx.showToast({
         title: '保存成功',
+      })
+      wx.navigateTo({
+        url: '/pages/admin/manager/manager',
       })
     }).catch(()=>{
       wx.hideLoading()

@@ -6,7 +6,6 @@ export const getDictSys = async(code) => {
   let res = wx.getStorageSync(storageKey.dictSys)
   if(res){
     if(code){
-      console.log(code)
       return getDictSysCode(res,code)
     }
     return res

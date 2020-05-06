@@ -25,7 +25,7 @@
 	},
 	"appid": "wx073efdeae77fe256",
 	"projectname": "mini.templatesy",
-	"libVersion": "2.2.3",
+	"libVersion": "2.6.6",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
