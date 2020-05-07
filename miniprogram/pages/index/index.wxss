@@ -1,12 +1,9 @@
-
+page{
+  background-color: var(--c-bg-black);
+}
 .hug-title{
   font-size: 36rpx;
   font-weight: bold;
   margin-bottom: 32rpx;
-}
-.swiper-1{
-  height: 622rpx;
-}
-.swiper-item{
-  padding-right: 10rpx;
+  color: #fff;
 }

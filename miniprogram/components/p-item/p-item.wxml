@@ -1,8 +1,16 @@
 <view class="item">
-  <view class="pic">
+  <view class="pic c-clearfix">
     <view class="pic__main">
-      <image class="image" mode="scaleToFill" src="../../images/temp/1.jpg"></image>
+      <image class="image" mode="scaleToFill" src="{{data.images[0]}}"></image>
     </view>
-    
+    <view class="pic__sed">
+    <scroll-view class="images" scroll-y="true" >
+      <view class="item" wx:for="{{data.images}}" wx:key="index" wx:if="{{index>0}}">
+        <image class="image" mode="scaleToFill" src="{{item}}"></image>
+      </view>
+      </scroll-view>
+    </view>
   </view>
+  <view class="c-clear"></view>
+  <view class="title"><van-icon class="icon" name="play" />{{data.title}}</view>
 </view>

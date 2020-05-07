@@ -23,7 +23,11 @@ Page({
       })
     }).finally(()=>{
       wx.hideLoading()
+      wx.stopPullDownRefresh()
     })
   },
+  onPullDownRefresh(){
+    this.getList()
+  }
 
 })

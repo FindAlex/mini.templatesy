@@ -53,14 +53,16 @@ Page({
   handleUploadAfterRead(e){
     console.log(e)
     this.setData({
-      fileList: e.detail.file
+      fileList: [...this.data.fileList,...e.detail.file]
     })
     
   },
   handleUploadDelete(e){
-    this.data.images.splice(e.detail.index,1)
+    this.data.form.images.splice(e.detail.index,1)
+    this.data.fileList.splice(e.detail.index,1)
     this.setData({
-      images: this.data.images
+      'form.images': this.data.form.images,
+      fileList: this.data.fileList
     })
   },
   handleSubmit(){
@@ -104,9 +106,7 @@ Page({
       wx.showToast({
         title: '保存成功',
       })
-      wx.navigateTo({
-        url: '/pages/admin/manager/manager',
-      })
+      wx.navigateBack()
     }).catch(()=>{
       wx.hideLoading()
     })

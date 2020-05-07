@@ -1,12 +1,19 @@
 
 page {
-  /* background: #f6f6f6; */
-  background-color: #fff;
+  background: #f6f6f6;
   font-size: 28rpx;
   font-family: PingFang SC, 'Helvetica Neue', Arial, sans-serif;
 }
 image{
   display: block;
+}
+.c-clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.c-clear{
+  clear: both;
 }
 .c-wrap{
   padding: 32rpx;

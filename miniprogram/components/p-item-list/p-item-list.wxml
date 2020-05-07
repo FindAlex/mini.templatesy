@@ -1,5 +1,3 @@
 <view class="list-wrap">
-  <p-item class="list-item" />
-  <p-item class="list-item" />
-  <p-item class="list-item" />
+  <p-item wx:for="{{list}}" wx:key="index" data="{{item}}" class="list-item"  />
 </view>

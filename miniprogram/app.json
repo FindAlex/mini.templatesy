@@ -12,13 +12,14 @@
   "window": {
     "backgroundColor": "#ffffff",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "移动应用设计灵感",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "小程序设计灵感",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#999",
-    "selectedColor": "#1989fa",
+    "selectedColor": "#fff",
+    "backgroundColor": "#333",
     "list": [
       {
         "pagePath": "pages/index/index",

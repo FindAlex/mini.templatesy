@@ -2,5 +2,6 @@
 @import "./style/base.wxss";
 
 page{
-  --c-bg-gray: #f6f6f6
+  --c-bg-gray: #f6f6f6;
+  --c-bg-black: #333;
 }

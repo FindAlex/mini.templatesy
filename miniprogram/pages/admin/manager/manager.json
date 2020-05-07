@@ -1,4 +1,5 @@
 {
   "navigationBarTitleText":"Document列表",
-  "usingComponents": {}
+  "usingComponents": {},
+  "enablePullDownRefresh":true
 }
